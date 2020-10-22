@@ -1,0 +1,22 @@
+Diego Fernando Montaño Pérez A01282875
+Compilar libreria estáticas y dinámicas:
+
+- Estáticas:
+Crear dos archivos, uno tendra extension .c y tendra las funciones con sus operaciones.
+El segundo sera un archivo header por lo que su extension sera .h y este solo tendra los nombres de las funciones y sus parametros.
+
+Para compliar se usaran los siguinetes formatos (los nombres son los que use para mis archivos):
+ gcc -c lib_static.c -o lib_static.o
+ ar rcs lib_static.a lib_static.o
+
+Ya teniendo compilada la libreria falta linkear el main con la libreria statica ya creada por lo que se usara los siguientes comandos:
+ gcc -c main.c -o main.o  //Crear ejecutable del main
+ gcc -o main main.o -L. -l_static  // El -L funciona para decir que la libreria se encuentra en la misma carpeta del main
+
+Ya solo sería correr el main y deberia tomar las funciones de la libreria.
+
+- Dinámicas:
+Se hacen los mismos pasos que la estáticas de crear dos archvios y hacer su correr su archivo con su extensión .o
+Pero en ves de correr el comando ar rcs que las vuelve estaticas usaremos el comando para volver la librería dinámica.
+  gcc -shared -o lib_static.dll lib_static.o // Para windows en caso de ser linux se debera usar la extension .so
+  
