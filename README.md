@@ -1,2 +1,2 @@
 # ProgrammingLanguages
-Problems solved in Racket, Haskell and Erlang for Programming Languages Course
+Problems solved in Racket, Haskell, Erlang and Prolog for Programming Languages Course
